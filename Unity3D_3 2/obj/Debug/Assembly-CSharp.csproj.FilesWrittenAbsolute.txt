@@ -1,0 +1,17 @@
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/UnityEngine.dll
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/UnityEditor.dll
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/Mono.Cecil.dll
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/Unity.DataContract.dll
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/obj/Debug/Assembly-CSharp.dll
+/Users/WillPyle/Documents/Unity/Unity Projects/Unity3D_3/obj/Debug/Assembly-CSharp.dll.mdb
