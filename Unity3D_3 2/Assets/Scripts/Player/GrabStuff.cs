@@ -58,6 +58,7 @@ public class GrabStuff : MonoBehaviour
 						otherObject.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezeAll;//Stops object from being moved while being held
 						otherObject.transform.localScale -= new Vector3 ((otherObject.transform.localScale.x / 4 * 3), (otherObject.transform.localScale.y / 4 * 3), (otherObject.transform.localScale.z / 4 * 3));//Scales object down in the stupidest way imaginable lol
 						Debug.Log ("Grabbing object:  " + otherObject.name);
+						otherObject.transform.SetParent (this.gameObject.transform);
 					}
 
 				} else if (holdingObject) {
@@ -67,7 +68,7 @@ public class GrabStuff : MonoBehaviour
 					otherObject.transform.localScale += new Vector3 ((otherObject.transform.localScale.x * 3), (otherObject.transform.localScale.y * 3), (otherObject.transform.localScale.z * 3));//Scales object back up in the stupidest way imaginable lol
 					otherObject.transform.parent = null; //Parents The camera to the object
 					Debug.Log ("Dropping object:  " + otherObject.name);
-					otherObject.transform.SetParent (GameObject.Find ("World").transform, true);//Sets parent back to "World Object"
+					otherObject.transform.SetParent (GameObject.Find ("Level").transform, true);//Sets parent back to "World Object"
 				}
 			} else if (Input.GetButtonDown (placeButton)) {
 				if (holdingObject) {
@@ -78,7 +79,7 @@ public class GrabStuff : MonoBehaviour
 						otherObject.transform.position = new Vector3 (placeHit.point.x, placeHit.point.y, placeHit.point.z);
 						otherObject.transform.localScale += new Vector3 ((otherObject.transform.localScale.x * 3), (otherObject.transform.localScale.y * 3), (otherObject.transform.localScale.z * 3));//Scales object back up in the stupidest way imaginable lol
 						otherObject.transform.LookAt (transform, Vector3.up);//faces the object towards the player
-						otherObject.transform.SetParent (GameObject.Find ("World").transform, true);//Sets parent back to "World Object"
+						otherObject.transform.SetParent (GameObject.Find ("Level").transform, true);//Sets parent back to "World Object"
 						holdingObject = false;
 					}
 

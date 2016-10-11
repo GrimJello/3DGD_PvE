@@ -7,7 +7,6 @@ TagManager:
   - Targets
   - Items
   - Projectiles
-  - p2cam
   - enemy
   - GameManager
   - Monitor

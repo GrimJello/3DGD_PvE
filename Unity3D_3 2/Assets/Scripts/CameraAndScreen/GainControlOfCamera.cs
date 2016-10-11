@@ -8,11 +8,17 @@ public class GainControlOfCamera : MonoBehaviour {
 	private PlayerManager playMan;
 	private Camera camera;
 	private bool isActive;
-
+	public RenderTexture rendTex;
 
 	// Use this for initialization
 	void Start () {
+
+		if (rendTex == null) {
+			Debug.Log ("Please assign rendertexture in script");
+		}
+
 		isActive = false;
+		Debug.Log (GetComponentInChildren<Renderer> ());
 		camControl = turret.GetComponent<CameraController> ();
 		camera = turret.GetComponentInChildren<Camera> ();
 	}
@@ -29,6 +35,7 @@ public class GainControlOfCamera : MonoBehaviour {
 		if (!isActive) {
 			isActive = true;
 			this.playMan = playMan;
+			camera.targetTexture = null;
 			
 			camControl.SetControllingPlayerManager(playMan);
 
@@ -46,10 +53,11 @@ public class GainControlOfCamera : MonoBehaviour {
 	}
 
 	public void LoseControl() {
+		camera.targetTexture = rendTex;
 		playMan.ControlPlayer ();
 		camControl.LoseControl ();
 		this.playMan = null;
-		camera.enabled = false;
+		camera.enabled = true;
 		isActive = false;
 	}
 }
