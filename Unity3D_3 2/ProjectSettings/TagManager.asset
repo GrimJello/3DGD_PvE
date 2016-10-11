@@ -10,6 +10,7 @@ TagManager:
   - p2cam
   - enemy
   - GameManager
+  - Monitor
   layers:
   - Default
   - TransparentFX
