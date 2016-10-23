@@ -10,6 +10,9 @@ TagManager:
   - enemy
   - GameManager
   - Monitor
+  - p2cam
+  - Grabbable
+  - Level
   layers:
   - Default
   - TransparentFX

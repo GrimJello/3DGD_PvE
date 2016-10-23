@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class AIPathing : MonoBehaviour
 {
@@ -122,9 +123,10 @@ public class AIPathing : MonoBehaviour
 
 	void OnCollisionEnter (Collision col)
 	{
-		if (col.gameObject.tag == "Player") {
-			Destroy (col.gameObject);
-			Debug.Log ("touch");
+		Debug.Log ("hit something");
+		if (col.gameObject.CompareTag("Player")) {
+			
+			SceneManager.LoadScene ("GameScene");
 		}
 	}
 }

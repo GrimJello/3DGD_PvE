@@ -18,8 +18,7 @@ public class GainControlOfCamera : MonoBehaviour {
 		}
 
 		isActive = false;
-		Debug.Log (GetComponentInChildren<Renderer> ());
-		camControl = turret.GetComponent<CameraController> ();
+		camControl = turret.GetComponentInChildren<CameraController> ();
 		camera = turret.GetComponentInChildren<Camera> ();
 	}
 	

@@ -48,7 +48,7 @@ public class FirstPersonController : MonoBehaviour
 			} else if (playerManager.player == Player.player2) {
 				// Movement is based on the current axis position times speed.
 				float deltaX = Input.GetAxis ("HorizontalP2") * speed;
-				float deltaZ = Input.GetAxis ("VerticalP2") * speed;
+				float deltaZ = Input.GetAxis ("VerticalP2") * speed * -1f;
 				// Ground movement
 				movement = new Vector3(deltaX, 0, deltaZ);  // Ground-based movement. Y will be handled below
 				movement = Vector3.ClampMagnitude(movement, speed); // Limit movement speed
