@@ -1411,6 +1411,16 @@ Prefab:
       propertyPath: m_SpotAngle
       value: 61
       objectReference: {fileID: 0}
+    - target: {fileID: 108000012213027630, guid: fc03b45cda3090d4da50aae4fb693bff,
+        type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 108000012213027630, guid: fc03b45cda3090d4da50aae4fb693bff,
+        type: 2}
+      propertyPath: m_Shadows.m_Strength
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc03b45cda3090d4da50aae4fb693bff, type: 2}
   m_IsPrefabParent: 0
@@ -1783,6 +1793,16 @@ Prefab:
         type: 2}
       propertyPath: m_SpotAngle
       value: 61
+      objectReference: {fileID: 0}
+    - target: {fileID: 108000012213027630, guid: fc03b45cda3090d4da50aae4fb693bff,
+        type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 108000012213027630, guid: fc03b45cda3090d4da50aae4fb693bff,
+        type: 2}
+      propertyPath: m_Shadows.m_Strength
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000012800482654, guid: fc03b45cda3090d4da50aae4fb693bff, type: 2}
