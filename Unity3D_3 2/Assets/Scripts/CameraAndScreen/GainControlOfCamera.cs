@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GainControlOfCamera : MonoBehaviour {
 
@@ -9,6 +10,11 @@ public class GainControlOfCamera : MonoBehaviour {
 	private Camera camera;
 	private bool isActive;
 	public RenderTexture rendTex;
+
+	public Text ammoTextP1;
+	public Text ammoTextP2;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -31,18 +37,29 @@ public class GainControlOfCamera : MonoBehaviour {
 	}
 
 	public void GainControl(PlayerManager playMan) {
+
 		if (!isActive) {
+
 			isActive = true;
 			this.playMan = playMan;
 			camera.targetTexture = null;
 			
-			camControl.SetControllingPlayerManager(playMan);
 
 
 			if (playMan.player == Player.player1) {
+
 				camera.rect = new Rect (0, 0, 0.5f, 1);
+				Debug.Log ("asdf");
+
+				ammoTextP1.enabled = true;
+				camControl.SetControllingPlayerManager(playMan, ammoTextP1);
+
 			} else if (playMan.player == Player.player2) {
 				camera.rect = new Rect (0.5f, 0, 0.5f, 1);
+
+				ammoTextP2.enabled = true;
+				camControl.SetControllingPlayerManager(playMan, ammoTextP2);
+
 			}
 
 			playMan.ControlCamera ();
@@ -52,6 +69,13 @@ public class GainControlOfCamera : MonoBehaviour {
 	}
 
 	public void LoseControl() {
+
+		if (playMan.player == Player.player1) {
+			ammoTextP1.enabled = false;
+		} else if (playMan.player == Player.player2) {
+			ammoTextP2.enabled = false;
+		}
+
 		camera.targetTexture = rendTex;
 		playMan.ControlPlayer ();
 		camControl.LoseControl ();

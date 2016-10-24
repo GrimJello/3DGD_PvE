@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Comp
-  m_Shader: {fileID: 4800000, guid: 9cf976d890e2a471f95981e18a7608ba, type: 3}
+  m_Shader: {fileID: 4800000, guid: 496d0e949e0cf460c935b851120f3f2d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -75,6 +75,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - first:
+        name: _normalMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
         name: _BumpScale
@@ -127,6 +133,9 @@ Material:
     - first:
         name: _ZWrite
       second: 1
+    - first:
+        name: _node_396
+      second: 5
     - first:
         name: _node_4222
       second: 30

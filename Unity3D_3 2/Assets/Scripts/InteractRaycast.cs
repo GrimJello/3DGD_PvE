@@ -25,10 +25,11 @@ public class InteractRaycast : MonoBehaviour {
 		RaycastHit hit;
 		Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
-		if (Physics.Raycast(transform.position, fwd, out hit, 2f)) {
+		if (Physics.Raycast(transform.position, fwd, out hit, 3f)) {
 			GameObject hitObject = hit.collider.gameObject;
 
 			if (hitObject.CompareTag("Monitor")) {
+
 				hitObject.GetComponent<GainControlOfCamera> ().GainControl(playMan);
 			}
 

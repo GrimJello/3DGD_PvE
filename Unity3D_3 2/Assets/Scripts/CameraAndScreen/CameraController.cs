@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour {
 
@@ -9,10 +10,12 @@ public class CameraController : MonoBehaviour {
 	private CamShootingManager camShootingManager;
 
 	private Vector3 surfaceNormal;
+	private Quaternion lastKnownAngle;
 
 	public float sensitivityH;
 	public float sensitivityV;
 
+	public Text ammoText; 
 
 	void Start() {
 		player = Player.noPlayer;
@@ -44,15 +47,17 @@ public class CameraController : MonoBehaviour {
 		
 			
 
-			if (Input.GetAxis ("FireP1") > 0.3f) {
+			if (Input.GetAxis ("FireP1") > 0.3f && camShootingManager.ammunition > 0) {
 
 					camShootingManager.StartCoroutine ("Shooting");
 					camShootingManager.StopCoroutine ("StopShooting");
+					ammoText.text = camShootingManager.ammunition.ToString() + "/" + camShootingManager.startingAmmo.ToString();
+					Debug.Log ("Ammotext: " + ammoText + " Shootman: " + camShootingManager);
 
-			} else if (Input.GetAxis ("FireP1") <= 0.3f) {
+			} else {
 					camShootingManager.StopCoroutine ("Shooting");
 					camShootingManager.StartCoroutine ("StopShooting");
-
+					ammoText.text = camShootingManager.ammunition.ToString() + "/" + camShootingManager.startingAmmo.ToString();
 			}
 		
 
@@ -71,32 +76,38 @@ public class CameraController : MonoBehaviour {
 			}
 
 
+			if ((Input.GetAxis ("FireP2") > 0.3f) && camShootingManager.ammunition > 0) {
 
-
-
-			if (Input.GetAxis ("FireP2") > 0.3f) {
 
 				camShootingManager.StartCoroutine ("Shooting");
 				camShootingManager.StopCoroutine ("StopShooting");
+				ammoText.text = camShootingManager.ammunition.ToString() + "/" + camShootingManager.startingAmmo.ToString();
 
-
-			} else if (Input.GetAxis ("FireP2") <= 0.3f) {
+			} else {
 
 				camShootingManager.StopCoroutine ("Shooting");
 				camShootingManager.StartCoroutine ("StopShooting");
+				ammoText.text = camShootingManager.ammunition.ToString() + "/" + camShootingManager.startingAmmo.ToString();
 
 			}
 		}
 
-		if (surfaceNormal != null) {
+		if (surfaceNormal != null && player!= null) {
+			if (Vector3.Angle (transform.forward, surfaceNormal) > 60f) {
+				transform.rotation = lastKnownAngle;
+			} else {
+				lastKnownAngle = transform.rotation;
+			}
 		}
+
 	
 	}
 
 	//this function will be called from the display that is tied to this camera
-	public void SetControllingPlayerManager(PlayerManager playerManager) {
+	public void SetControllingPlayerManager(PlayerManager playerManager, Text ammo) {
 		controllingPlayerManager = playerManager;
 		player = playerManager.player;
+		ammoText = ammo;
 	}
 
 
@@ -104,10 +115,12 @@ public class CameraController : MonoBehaviour {
 		player = Player.noPlayer;
 		camShootingManager.StopCoroutine ("Shooting");
 		camShootingManager.StartCoroutine ("StopShooting");
+		ammoText = null;
 	}
 
 	public void SetSurfaceNormal(Vector3 normal) {
 		surfaceNormal = normal;
+		transform.forward = normal;
 	}
 
 }

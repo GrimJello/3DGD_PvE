@@ -13,6 +13,8 @@ TagManager:
   - p2cam
   - Grabbable
   - Level
+  - Wall
+  - UI
   layers:
   - Default
   - TransparentFX
