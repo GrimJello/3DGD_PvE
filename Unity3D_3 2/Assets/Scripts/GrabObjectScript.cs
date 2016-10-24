@@ -97,10 +97,16 @@ public class GrabObjectScript : MonoBehaviour {
 	}
 
 	public void PlaceObject(RaycastHit hit) {
-		Debug.Log ("placed");
+		Debug.Log(LayerMask.NameToLayer("Mountable"));
+		Debug.Log (placeLayer.value);
 
 		//reset everything to normal
-		StartCoroutine("SetObjectToWall", hit);
+		if (placeLayer.value == Mathf.Pow(2, LayerMask.NameToLayer ("Mountable"))) {
+			StartCoroutine ("SetObjectToWall", hit);
+		} else if (placeLayer.value == Mathf.Pow(2, LayerMask.NameToLayer ("Camera"))) {
+			StartCoroutine ("RefillAmmoAndDestroy", hit);
+		
+		}
 
 		//set transform to raycast location if it hit something
 
@@ -124,6 +130,12 @@ public class GrabObjectScript : MonoBehaviour {
 
 	}
 
+	IEnumerator RefillAmmoAndDestroy(RaycastHit hit) {
+		yield return new WaitForEndOfFrame ();
+		hit.collider.gameObject.GetComponentInChildren<CamShootingManager> ().ReloadWeapon ();
+		interactRaycast.canInteract = true;
+		Destroy (gameObject);
+	}
 
 	IEnumerator ResetStuff() {
 		yield return new WaitForEndOfFrame ();

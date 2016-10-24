@@ -162,7 +162,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013191433432}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: -0.0000004179353, z: 0.613}
+  m_LocalPosition: {x: 0, y: -0.0000004179353, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_Children: []
@@ -175,7 +175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010507108064}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -5.4, z: 0.61300015}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -487,15 +487,15 @@ Light:
   serializedVersion: 7
   m_Type: 2
   m_Color: {r: 1, g: 0.76551723, b: 0, a: 1}
-  m_Intensity: 8
-  m_Range: 57.58
+  m_Intensity: 2.51
+  m_Range: 19.73
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.616
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -560,8 +560,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletHole: {fileID: 1000011655938318, guid: 8c295e4a8da7f4ba890686be7a66bec6, type: 2}
+  ammunition: 0
+  startingAmmo: 150
   shootingClip: {fileID: 8300000, guid: b20c31f6b71544b90979548f1fcc989a, type: 3}
-  lightStep: 0.01
+  reloadClip: {fileID: 0}
+  lightStep: 0.03
   shootingIntensity: 8
   nonShootingIntensity: 4
   angleStep: 0.07
@@ -629,6 +632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivityH: 2
   sensitivityV: 2
+  ammoText: {fileID: 0}
 --- !u!114 &114000014090977416
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Dirty_Tile
-  m_Shader: {fileID: 4800000, guid: 9cf976d890e2a471f95981e18a7608ba, type: 3}
+  m_Shader: {fileID: 4800000, guid: 496d0e949e0cf460c935b851120f3f2d, type: 3}
   m_ShaderKeywords: _EMISSION _NORMALMAP
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -76,6 +76,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
+        name: _node_4679
+      second:
+        m_Texture: {fileID: 2800000, guid: b792f2bcdcfa94c5991ef9c9dfe192b9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _node_5880
+      second:
+        m_Texture: {fileID: 2800000, guid: e29cac4cdc145487facb2d6f199202e9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _normalMap
       second:
         m_Texture: {fileID: 2800000, guid: e29cac4cdc145487facb2d6f199202e9, type: 3}
@@ -96,7 +108,7 @@ Material:
       second: 0
     - first:
         name: _Gloss
-      second: 0.5
+      second: 1
     - first:
         name: _GlossMapScale
       second: 1
@@ -134,7 +146,19 @@ Material:
         name: _ZWrite
       second: 1
     - first:
+        name: _node_396
+      second: 5
+    - first:
+        name: _node_4222
+      second: 5
+    - first:
         name: _node_4615
+      second: 5
+    - first:
+        name: _node_7342
+      second: 1
+    - first:
+        name: _node_9408
       second: 5
     m_Colors:
     - first:
@@ -145,4 +169,4 @@ Material:
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
         name: _SpecColor
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 0.82745105, g: 0.82745105, b: 0.82745105, a: 1}

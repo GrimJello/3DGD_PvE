@@ -134,6 +134,9 @@ Material:
         name: _ZWrite
       second: 1
     - first:
+        name: _node_1461
+      second: 0
+    - first:
         name: _node_396
       second: 5
     - first:

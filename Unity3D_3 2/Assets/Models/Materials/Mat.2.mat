@@ -76,7 +76,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
-        name: _normalMap
+        name: _node_5880
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -96,7 +96,7 @@ Material:
       second: 0
     - first:
         name: _Gloss
-      second: 0.4444445
+      second: 0.5
     - first:
         name: _GlossMapScale
       second: 1
@@ -134,18 +134,15 @@ Material:
         name: _ZWrite
       second: 1
     - first:
+        name: _node_1461
+      second: 0
+    - first:
         name: _node_396
-      second: 5
-    - first:
-        name: _node_4222
-      second: 30
-    - first:
-        name: _node_4615
-      second: 5
+      second: 10
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.42745098, g: 0.42352942, b: 0.43137255, a: 1}
+      second: {r: 0.8, g: 0.24705882, b: 0.25490198, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
